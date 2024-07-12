@@ -1,0 +1,609 @@
+/*global rules*/
+h1,h2,h3,h4,h5,h6{
+    font-family:"Montserrat", sans-serif;;
+}
+body{
+    font-family: "Poppins", sans-serif;
+}
+.container{
+    width: 80%;
+    margin: auto;
+}
+@media screen and (max-width:767px) {
+    .container{
+        min-width:100%;
+    }
+}
+/*loader*/
+.loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255 255 255 / 20%);
+    transition: 1s;
+}
+.loader::after{
+    content: "";
+    width: 75px;
+    height: 75px;
+    border: 15px solid rgb(255 255 255 / 80%);
+    border-top-color: #1C1C1C;
+    border-radius: 50%;
+    animation: loading 1s ease infinite;
+}
+.loader-hidden{
+    visibility: hidden;
+    opacity: 0;
+}
+/*animation*/
+@keyframes loading{
+    form{transform: rotate(0);}
+    to{transform: rotate(1turn);}
+}
+/*navbar*/
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.navbar-brand{
+    font-size: 18px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+.nav-link{
+    font-size: 14px;
+    text-transform: capitalize;
+}
+.navbar-nav li::after{
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: black;
+    display: block;
+    transition: 0.2s linear;
+    position: relative;
+    left: 25px;
+    bottom: 8px;
+}
+.navbar-nav li:hover::after{
+    width: 45%; 
+}
+.navbar-nav .bar{
+    display: none;
+    border: none;
+    font-size: 14px;
+}
+.navbar-nav .bar i{
+    border: none;
+    font-size: 14px;
+}
+.navbar-nav .bar:hover::after{
+    width: 0;
+    cursor: pointer;
+}
+.navbar-nav .li1::after{
+    content: "";
+    width: 45%;
+    height: 2px;
+    background-color: white;
+    display: block;
+    position: relative;
+    bottom: 25px;
+    left: 25px;
+}
+@media screen and (max-width:767px) {
+    .navbar-nav .bar{
+        display: block;
+    }
+    .navbar-nav li{
+        display: none;
+    }
+}
+/*home*/
+.background-image .text{
+    text-align: center;
+    margin-top: 10%;
+}
+.background-image .text h1{
+    font-weight: 800;
+    font-size: 50px;
+}
+.background-image .text h2{
+    font-weight: 200;
+    font-size: 60px;
+}
+.background-image .text h2::after{
+    content: "";
+    animation: text 10s steps(20) normal infinite;
+    font-size: 60px;
+    font-weight: 400;
+}
+.background-image{
+    background-image:linear-gradient(to right, rgb(0 0 0 / 50%), rgb(0 0 0 / 50%)), url("../imgs/bg.jpg");
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+/*Animation*/
+@keyframes text {
+    0%{
+        content: "|";
+    }
+    4%{
+        content: "L|";
+    }
+    8%{
+        content: "La|";
+    }
+    12%{
+        content: "Lar|";
+    }
+    16%{
+        content: "Larr|";
+    }
+    20%{
+        content: "Larry|";
+    }
+    24%{
+        content: "Larry |";
+    }
+    28%{
+        content: "Larry D|";
+    }
+    32%{
+        content: "Larry Da|";
+    }
+    36%{
+        content: "Larry Dan|";
+    }
+    40%{
+        content: "Larry Dani|";
+    }
+    44%{
+        content: "Larry Danie|";
+    }
+    48%{
+        content: "Larry Daniel|";
+    }
+    50%{
+        content: "Larry Daniels|";
+    }
+    52%{
+        content: "|";
+    }
+    55%{
+        content: "D|";
+    }
+    57%{
+        content: "De|";
+    }
+    60%{
+        content: "Dev|";
+    }
+    62%{
+        content: "Deve|";
+    }
+    65%{
+        content: "Devel|";
+    }
+    67%{
+        content: "Develo|";
+    }
+    70%{
+        content: "Develop|";
+    }
+    72%{
+        content: "Develope|";
+    }
+    75%{
+        content: "Developer|";
+    }
+    77%{
+        content: "|";
+    }
+    80%{
+        content: "D|";
+    }
+    82%{
+        content: "De|";
+    }
+    85%{
+        content: "Des|";
+    }
+    87%{
+        content: "Desi|";
+    }
+    90%{
+        content: "Desig|";
+    }
+    92%{
+        content: "Design|";
+    }
+    95%{
+        content: "Designe|";
+    }
+    100%{
+        content: "Designer|";
+    }
+}
+.background-image .icons ul li{
+    background-color: rgb(0 0 0 / 50%);
+    border-radius: 50%;
+    margin: 0 5px;
+    padding: 5px 10px;
+}
+
+/*about me*/
+.about-me .image img{
+    width: 100%;
+    height: 500px;
+}
+.about-me .row h2{
+    font-size: 30px;
+    font-weight: 800;
+}
+.about-me .row p{
+    color: #999999;
+    width: 110%;
+}
+.about-me .row p span{
+    font-size: 15px;
+    font-weight: 700;
+}
+.about-me .row .skill-progress{
+    width: 100%;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background: #f7f7f7;
+    box-shadow: 0px 2px 7px rgba(0 0 0 / 15%) inset;
+    position: relative;
+}
+.about-me .row .skill-progress h3{
+    font-size: 13px;
+    color: #fff;
+    position: relative;
+    z-index: 2;
+    font-weight:500;
+    top: 5px;
+}
+.about-me .row .skill-progress span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 10%;
+    border-radius: 5px;
+    background-color: #1c1c1c;
+    font-weight:500;
+}
+.about-me .row .skill-progress span::after{
+    content: attr(data-value);
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 11px;
+    color: #fff;
+}
+.about-me .row .buttons button{
+    padding: 10px 30px;
+    border-radius: 5px;
+    transition: 0.5s;
+    font-size: 13px;
+}
+.about-me .row .buttons button.cv{
+    background-color: #1C1C1C;
+    color: white;
+    border: none;
+}
+.about-me .row .buttons button.cv:hover{
+    background-color: white;
+    color: #1C1C1C;
+    border: 1px solid #1C1C1C;
+}
+.about-me .row .buttons button.contact{
+    background-color: white;
+    color: #1C1C1C;
+    border: 1px solid #1C1C1C;
+}
+.about-me .row .buttons button.contact:hover{
+    background-color: #1C1C1C;
+    color: white;
+    border: none;
+}
+
+/*service*/
+.services .text h2{
+    font-size: 40px;
+    font-weight: 900;
+    color: #343434;
+}
+.services .card{
+    background-color: white;
+    text-align: center;
+}
+.services .card i{
+    border-radius: 50%;
+    border: none;
+    padding: 20px 20px;
+    font-size: 30px;
+    transition: .5s;
+    color: #343434;
+    background-color: #F7F7F7;
+    margin: 20px 0;
+}
+.services .card i:hover{
+    background-color: #343434;
+    border: none;
+    color: white;
+}
+.services .card h3{
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 27px;
+}
+.services .card p{
+    color: #748182;
+    width: 80%;
+    margin: auto;
+    padding: 5px 0 40px;
+    font-size: 14px;
+}
+
+/*portfolio*/
+.portfolio .text h2{
+    font-size: 40px;
+    font-weight: 900;
+    color: #343434;
+}
+.nav-link {
+    color: #111111;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #111111;
+    background: none;
+    border-radius: 0;
+}
+.nav-link:focus, .nav-link:hover {
+    color: #111111;
+}
+.nav-pills .nav-link.active::after, .nav-pills .show>.nav-link::after{
+    width: 100%;
+}
+.nav-pills .nav-link::after{
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: #111111;
+    display: block;
+    transition: .5s;
+}
+.portfolio .content .row .overlay{
+    background-color: #F8F7F8;
+    border: 5px solid #D7D5D6;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: 1s;
+}
+.portfolio .content .row .overlay h6{
+    font-size: 12px;
+    font-weight: 700;
+}
+.portfolio .content .row .overlay i{
+    color: white;
+    background-color: #111111;
+    padding: 6px 6px;
+    border-radius: 50%;
+    font-size: 14px;
+}
+.portfolio .content .row .overlay i:hover{
+    color: #111111;
+    background-color: white;
+    cursor: pointer;
+    border: 1px solid #111111;
+}
+.portfolio .content .row .card:hover .overlay{
+    opacity: 1;
+}
+
+/*clients*/
+.clients{
+    background-color: #F7F7F7;
+}
+.clients .text h2{
+    font-size: 40px;
+    font-weight: 900;
+    color: #343434;
+}
+.clients .carousel-indicators{
+    position: absolute;
+    bottom: 0;
+}
+.clients .carousel-indicators button{
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background-color: #D6D6D6;
+}
+.clients .carousel-indicators button.active{
+    background-color: #869791;
+}
+.clients .carousel-inner .carousel-item img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.clients .carousel-inner .carousel-item p{
+    color: #748182;
+    width: 80%;
+    font-size: 15px;
+    text-align: center;
+}
+.clients .carousel-inner .carousel-item h6{
+    font-weight: 600;
+    color: #343434;
+}
+.clients .carousel-inner .carousel-item span{
+    color: #888888;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/*clients2*/
+.clients2{
+    background-color: white;
+    padding: 100px 0;
+}
+.clients2 i{
+    font-size: 30px;
+    transition: .5s;
+}
+.clients2 h3{
+    font-size: 30px;
+    line-height: 33px;
+    font-weight: 900;
+}
+.clients2 p{
+    font-size: 15px;
+    font-weight: 600;
+    color: #748182;
+}
+
+/*team*/
+.team .text h2{
+    font-size: 40px;
+    font-weight: 900;
+    color: #343434;
+}
+.team .row .card{
+    background-color: #5B5B5B;
+    border: none;
+}
+.team .row h4{
+    font-size: 25px;
+    font-weight: 500;
+}
+.team .row h5{
+    font-size: 20px;
+    font-weight: 700;
+}
+.team .row .image .overlay{
+    background-color: #F8F7F8;
+    border: 5px solid #D7D5D6;
+    position: absolute;
+    left: 2.5%;
+    top: 1.5%;
+    width: 95%;
+    height: 80%;
+    transition: opacity 1s , transform 1s;
+    opacity: 0;
+}
+.team .row .image .overlay .icons ul{
+    position: absolute;
+    top: 40%;
+    transform: translate(-50%,-50%);
+    left: 50%;
+}
+.team .row .image .overlay i{
+    color: white;
+    background-color: #111111;
+    padding: 10px 10px;
+    border-radius: 50%;
+    font-size: 20px;
+}
+.team .row .image .overlay i:hover{
+    color: #111111;
+    background-color: white;
+    cursor: pointer;
+    border: 1px solid #111111;
+}
+.team .row .card:hover .overlay{
+    opacity: 1;
+    transform: rotateY(360deg);
+}
+
+/*contact*/
+.contact .text h2{
+    font-size: 40px;
+    font-weight: 900;
+    color: #343434;
+}
+.contact .card{
+    background-color: white;
+    text-align: center;
+    border: none;
+}
+.contact .card i{
+    border-radius: 50%;
+    border: none;
+    padding: 20px 20px;
+    font-size: 30px;
+    transition: .5s;
+    color: #343434;
+    background-color: #F7F7F7;
+    margin: 20px 0;
+}
+.contact .card i:hover{
+    background-color: #343434;
+    border: none;
+    color: white;
+}
+.contact .card h3{
+    font-weight: 700;
+    font-size: 16px;
+}
+.contact .card p{
+    color: #748182;
+    width: 110%;
+    padding: 5px 0 40px;
+    font-size: 15px;
+}
+.contact .row button{
+    border: none;
+    font-size: 13px;
+    padding: 10px 5px;
+    transition: .5s;
+    color: #F7F7F7;
+    background-color: #111111;
+    margin: 20px 0;
+    border-radius: 5px;
+    width: 15%;
+}
+.contact .row button:hover{
+    background-color: white;
+    border: 1px solid #111111;
+    color: #111111;
+}
+.contact .row textarea{
+    height: 150px;
+}
+.contact .row textarea , .contact .row input{
+    background-color: #F4F4F4;
+    color: #757575;
+    border: none;
+    font-size: 14px;
+}
+.contact .row input{
+    height: 30px;
+}
+
+/*footer*/
+.footer p{
+    color: #748182;
+    font-size: 13px;
+}
+
